@@ -1,0 +1,123 @@
+body {
+  background-color: #f4f7fa;  
+  color: #333;  
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2c3e50; 
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+
+p {
+  font-size: 1rem;
+  color: #7f8c8d; 
+  margin-bottom: 20px;
+}
+
+
+button {
+  background-color: #3498db; 
+  color: #ffffff; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+button:hover {
+  background-color: #2980b9; 
+  transform: scale(1.05);
+}
+
+
+div {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+h3 {
+  font-size: 1.2rem;
+  color: #2ecc71; 
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+
+p {
+  font-size: 1rem;
+  color: #7f8c8d; 
+}
+
+
+button:focus {
+  outline: none; 
+}
+/* تنسيق حقل البحث */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;  /* الحد الأقصى للعرض */
+  padding: 10px 15px;
+  border: 2px solid #3498db; /* حدود زرقاء */
+  border-radius: 50px;  /* حواف دائرية */
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease-in-out; /* تأثير السلاسة عند التفاعل */
+}
+
+.search-input:focus {
+  border-color: #2ecc71;  /* تغيير اللون عند التركيز */
+  box-shadow: 0 0 8px rgba(46, 204, 113, 0.5);  /* تأثير الظل */
+}
+
+.search-input::placeholder {
+  color: #7f8c8d;  /* لون النص في الحقل عند عدم الكتابة */
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3498db; /* لون الأيقونة الأزرق */
+  font-size: 1.2rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  background-color: #45a049;
+}
+
