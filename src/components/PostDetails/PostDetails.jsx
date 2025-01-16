@@ -23,7 +23,12 @@ export default function PostDetails() {
     }
     async function fetchComments() {
       const commentsData = await getAllComments();
-      setComments(commentsData);
+      // تحقق من نوع البيانات التي تم جلبها
+      if (Array.isArray(commentsData)) {
+        setComments(commentsData);
+      } else {
+        console.error("Received comments data is not an array:", commentsData);
+      }
     }
     fetchPostData();
     fetchComments();
@@ -42,7 +47,10 @@ export default function PostDetails() {
   }
 
   useEffect(() => {
-    setSpecificComments(comments.filter((comment) => comment.postId === Number(id))); 
+    // تحقق من أن `comments` هو مصفوفة قبل تصفيتها
+    if (Array.isArray(comments)) {
+      setSpecificComments(comments.filter((comment) => comment.postId === Number(id))); 
+    }
   }, [id, comments]); 
 
   if (!post) return <div>Loading...</div>; 
